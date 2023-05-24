@@ -1,0 +1,52 @@
+# Query: Fetch all books
+query {
+  books {
+    id
+    title
+    author
+    publishedYear
+  }
+}
+
+# Query: Fetch a single book by ID
+query {
+  book(id: "646dc09c5c40fe2443648c1b") {
+    id
+    title
+    author
+    publishedYear
+  }
+}
+
+# Mutation: Add a new book
+mutation {
+    addBook(title: "Book Master JavaScript", author: "Tegar Penemuan", publishedYear: 2023) {
+        id
+        title
+        author
+        publishedYear
+    }
+}
+
+# Mutation: Update a book
+mutation {
+  updateBook(id: "646dc09c5c40fe2443648c1b", title: "New Title", author: "New Author", publishedYear: 2022) {
+    id
+    title
+    author
+    publishedYear
+  }
+}
+
+# Mutation: Delete a book
+mutation {
+  deleteBook(id: "646dc09c5c40fe2443648c1b") {
+    id
+    title
+    author
+    publishedYear
+  }
+}
+
+
+
